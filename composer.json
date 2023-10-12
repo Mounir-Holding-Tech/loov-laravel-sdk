@@ -4,6 +4,7 @@
     "description": "loov payment solution",
     "keywords": ["payment", "laravel sdk","loov", "online payment"],
     "license": "MIT",
+    "version": "1.0.2",
     "authors": [
         {
             "name": "Arolle Fona",
@@ -16,8 +17,7 @@
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
-        "laravel/tinker": "^2.8",
-        "loov-payment/laravel-sdk":"1.0"
+        "laravel/tinker": "^2.8"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
