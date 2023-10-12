@@ -1,29 +1,15 @@
-name: Update Packagist
-
+name: Install Laravel SDK
 on:
   push:
-    branches:
-      - develop  # Replace with your main branch name
-
+    branches: [ develop ]
 jobs:
-  update-packagist:
+  build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: Set up PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: 7.4
-
-    - name: Install Composer dependencies
+    - name: Install dependencies
       run: composer install
-
-    - name: Create Packagist token
-      run: echo 'token: ${{ secrets.f167eaa1cddc97214bf5 }}' >> ~/.composer/auth.json
-
-    - name: Update Packagist
-      run: composer update loov-payment/laravel-sdk
+    - name: Install Laravel SDK
+      run: composer require loov-payment/laravel-sdk
 
