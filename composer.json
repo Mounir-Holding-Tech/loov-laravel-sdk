@@ -1,5 +1,5 @@
 {
-    "name": "loov/loov-laravel-sdk",
+    "name": "loov/laravel-sdk",
     "type": "library",
     "description": "loov payment solution",
     "keywords": ["payment", "laravel sdk","loov", "online payment"],
@@ -37,7 +37,7 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-            "LoovLaravelSdk\\": "loov-laravel-sdk/src/" 
+            "LoovLaravelSdk\\": "src/" 
         }
     },
     "scripts": {
