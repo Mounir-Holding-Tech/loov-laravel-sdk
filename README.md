@@ -1,22 +1,26 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<a href="https://packagist.org/packages/loov-payment/laravel-sdk"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/loov-payment/laravel-sdk"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/loov-payment/laravel-sdk"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/loov-payment/laravel-sdk"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
 
 ## Introduction
+
 Loov Solutions is an online payment tools.
 
 ## Installation
+
 Run this in your terminal to install loov fro comand line
 
-composer require loov/laravel-sdk
+``` bash
+composer require loov-payment/laravel-sdk
+```
 
 ## Requirements
+
 <ul>
 <li><b>amount</b>: The payment amount in the specified currency.</li>
 <li><b>currency</b>: The currency code of the payment amount.</li>
@@ -32,6 +36,8 @@ composer require loov/laravel-sdk
 </ul>
 
 ## Pay In 
+
+``` bash
 <?php
 namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
@@ -51,17 +57,24 @@ class payment extends Controller{
      ];
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->payIn($data);
 }
+``` 
+<p>Success Response</p>
 
-<h1>Success Response</h1>
-<p>Upon successful payment initiation, the API will respond with a status code of 200 along with the following response body:</p>
+<p>Upon successful payment initiation, the API will respond with a status code of 200 along with the following response
+ body:</p>
+
+``` bash
 {
     "status": 200,
     "message": "Payment initiated",
     "payment_url": "https://api.secure.payment.loov-solutions.com/payinit/oa7DZzEd8gwJ5PYQ",
     "reference": "LOC8SXoZuDVEvu1ODxs"
 }
+```
 
 ## Mobile SoftPay 
+
+``` bash
 <?php
 namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
@@ -77,9 +90,13 @@ class payment extends Controller{
      ];
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->mobileSoftPay($data);
 }
+```
 
 <p>Success Response</p>
+
 <p>Upon successfully initiating the mobile payment, the API will respond with a JSON object containing payment information.</p>
+
+``` bash
 {
     "error": false,
     "status": "success",
@@ -88,8 +105,10 @@ class payment extends Controller{
     "message": "Paiement e la clientele done. The devrez confirmer le paiement en saisissant son code PIN et vous recevrez alors un SMS. Merci d'utiliser des services Orange Money.",
     "reference": "LOMoac3hqZXuBHUHKy8"
 }
+```
 
 ## Supported Operators
+
 
 <table>
 <thead>
@@ -168,6 +187,8 @@ class payment extends Controller{
 </table>
 
 ## Pay Out
+
+``` bash
 <?php
 namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
@@ -181,9 +202,13 @@ class payment extends Controller{
      ];
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->payOut($data);
 }
+```
 
 <p>Success Response</p>
+
 <p>Upon successfully initiating the mobile payment, the API will respond with a JSON object containing payment information.</p>
+
+``` bash
 {
     "error": false,
     "status": "success",
@@ -191,9 +216,11 @@ class payment extends Controller{
     "reference": "MOMAVzvTY7DLyiRCR38",
     "message": "Transfer of 500 XAF transferred to 237699009999"
 }
+```
 
 ## Check Status
 
+``` bash
 <?php
 namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
@@ -201,9 +228,13 @@ use LoovLaravelSdk\LoovService;
 class payment extends Controller{
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->checkStatus($reference);
 }
+```
 
 <p>Success Response</p>
+
 <p>Upon successfully retrieving the payment status, the API will respond with a JSON object containing the payment status information.</p>
+
+``` bash
 {
     "error": false,
     "reference": "MOMAVzvTY7DLyiRCR38",
@@ -213,19 +244,12 @@ class payment extends Controller{
     "date": "2023-08-08 09:08:17",
     "customer": null
 }
+```
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Laravel, please send an e-mail to Arolle Fona via [fona.arolle@mounir-holding.com](mailto:fona.arolle@mounir-holding.com). All security vulnerabilities will be promptly addressed.
 
 ## License
-
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
