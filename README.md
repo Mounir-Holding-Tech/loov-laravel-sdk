@@ -120,13 +120,11 @@ class payment extends Controller{
 
 
 <table>
-<thead>
-<tr>country</tr>
-<tr>operator</tr>
-<tr>operator_code</tr>
-</thead>
-
-<tbody>
+<tr>
+<td>country</td>
+<td>operator</td>
+<td>operator_code</td>
+</tr>
 <tr>
 <td>Benin</td>
 <td>Mtn</td>
@@ -192,7 +190,6 @@ class payment extends Controller{
 <td>T-money</td>
 <td>t-money-togo</td>
 </tr>
-</tbody>
 </table>
 
 
