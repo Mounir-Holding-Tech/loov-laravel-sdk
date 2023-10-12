@@ -1,0 +1,29 @@
+name: Update Packagist
+
+on:
+  push:
+    branches:
+      - develop  # Replace with your main branch name
+
+jobs:
+  update-packagist:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 7.4
+
+    - name: Install Composer dependencies
+      run: composer install
+
+    - name: Create Packagist token
+      run: echo 'token: ${{ secrets.PACKAGIST_TOKEN }}' >> ~/.composer/auth.json
+
+    - name: Update Packagist
+      run: composer update loov-payment/laravel-sdk
+
