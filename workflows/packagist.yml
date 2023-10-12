@@ -22,7 +22,7 @@ jobs:
       run: composer install
 
     - name: Create Packagist token
-      run: echo 'token: ${{ secrets.PACKAGIST_TOKEN }}' >> ~/.composer/auth.json
+      run: echo 'token: ${{ secrets.f167eaa1cddc97214bf5 }}' >> ~/.composer/auth.json
 
     - name: Update Packagist
       run: composer update loov-payment/laravel-sdk
