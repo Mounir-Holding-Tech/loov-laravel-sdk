@@ -49,6 +49,30 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
 - **[Lendio](https://lendio.com)**
 
+## Introduction
+Loov Solutions is an online payment tools.
+
+## Installation
+Run this in your terminal to install loov fro comand line
+
+composer require loov/laravel-sdk
+
+## Pay In 
+<?php
+namespace App\Htpp\Controllers;
+use LoovLaravelSdk\LoovService; 
+
+class payin extends Controller{
+     $data =[
+        'amount' =>50000,
+        'currency' => 'XAF',
+        'payment_mode' => 'CARD',
+        'callback_url' => '
+
+     ]
+}
+
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
