@@ -119,7 +119,7 @@ class payment extends Controller{
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->mobileSoftPay($data);
 }
 
-<h1>Success Response</h1>
+<p>Success Response</p>
 <p>Upon successfully initiating the mobile payment, the API will respond with a JSON object containing payment information.</p>
 {
     "error": false,
@@ -131,6 +131,7 @@ class payment extends Controller{
 }
 
 ## Supported Operators
+
 <table>
 <thead>
 <tr>country</tr>
@@ -222,7 +223,7 @@ class payment extends Controller{
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->payOut($data);
 }
 
-<h1>Success Response</h1>
+<p>Success Response</p>
 <p>Upon successfully initiating the mobile payment, the API will respond with a JSON object containing payment information.</p>
 {
     "error": false,
@@ -242,7 +243,7 @@ class payment extends Controller{
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->checkStatus($reference);
 }
 
-<h1>Success Response</h1>
+<p>Success Response</p>
 <p>Upon successfully retrieving the payment status, the API will respond with a JSON object containing the payment status information.</p>
 {
     "error": false,
