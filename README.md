@@ -77,7 +77,7 @@ composer require loov/laravel-sdk
 namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
 
-class payin extends Controller{
+class payment extends Controller{
      $data =[
         'amount' =>50000,
         'currency' => 'XAF',
@@ -107,7 +107,7 @@ class payin extends Controller{
 namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
 
-class mobileSoftPay extends Controller{
+class payment extends Controller{
      $data =[
         'amount' =>50000,
         'operator' => 'XAF',
@@ -212,7 +212,7 @@ class mobileSoftPay extends Controller{
 namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
 
-class mobileSoftPay extends Controller{
+class payment extends Controller{
      $data =[
         'amount' =>50000,
         "operator": "orange-money-cm",
@@ -238,7 +238,7 @@ class mobileSoftPay extends Controller{
 namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
 
-class checkStatus extends Controller{
+class payment extends Controller{
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->checkStatus($reference);
 }
 
