@@ -11,6 +11,8 @@
 
 Loov Solutions is an online payment tools.
 
+
+
 ## Installation
 
 Run this in your terminal to install loov fro comand line
@@ -19,21 +21,24 @@ Run this in your terminal to install loov fro comand line
 composer require loov-payment/laravel-sdk
 ```
 
+
 ## Requirements
 
 <ul>
 <li><b>amount</b>: The payment amount in the specified currency.</li>
 <li><b>currency</b>: The currency code of the payment amount.</li>
-<li><b>payment_mode</b>: The chosen payment mode. value: <b>ALL<b>, <b>CARD<b>, <b>MOBILE_MONEY<b>.</li>
-<li><b>return_url</b>: URL to redirect after successful payment.</li>
-<li><b>cancel_url</b>: URL to redirect if payment is canceled.</li>
-<li><b>callback_url</b>: URL for payment notifications (webhook).</li>
 <li><b>description</b>: Description of the payment purpose.</li>
 <li><b>username</b>: Customer name.</li>
 <li><b>email</b>: Customer email.</li>
 <li><b>operator</b>: The mobile operator code used for the payment (e.g., "orange-money-cm")</li>
 <li><b>phoneNumber</b>: Customer phone number.</li>
+<li><b>return_url</b>: URL to redirect after successful payment.</li>
+<li><b>cancel_url</b>: URL to redirect if payment is canceled.</li>
+<li><b>callback_url</b>: URL for payment notifications (webhook).</li>
+<li><b>payment_mode</b>: The chosen payment mode. value: <b>ALL<b>, <b>CARD<b>, <b>MOBILE_MONEY<b>.</li>
 </ul>
+
+
 
 ## Pay In 
 
@@ -72,6 +77,8 @@ class payment extends Controller{
 }
 ```
 
+
+
 ## Mobile SoftPay 
 
 ``` bash
@@ -106,6 +113,8 @@ class payment extends Controller{
     "reference": "LOMoac3hqZXuBHUHKy8"
 }
 ```
+
+
 
 ## Supported Operators
 
@@ -186,6 +195,8 @@ class payment extends Controller{
 </tbody>
 </table>
 
+
+
 ## Pay Out
 
 ``` bash
@@ -217,6 +228,8 @@ class payment extends Controller{
     "message": "Transfer of 500 XAF transferred to 237699009999"
 }
 ```
+
+
 
 ## Check Status
 
