@@ -109,7 +109,7 @@ class payment extends Controller{
     "status": "success",
     "amount": "500",
     "fees": 10,
-    "message": "Paiement e la clientele done. The devrez confirmer le paiement en saisissant son code PIN et vous recevrez alors un SMS. Merci d'utiliser des services Orange Money.",
+    "message": "Confirm the payment by entering your PIN code and you will receive an SMS. Thank you for using Orange Money services.",
     "reference": "LOMoac3hqZXuBHUHKy8"
 }
 ```
