@@ -19,7 +19,6 @@
    );
    return $this;
 }
-
    public function payIn($data){
     $body = [
         'amount' => $data['amount'], 
