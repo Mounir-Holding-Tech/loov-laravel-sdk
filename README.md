@@ -48,6 +48,9 @@ namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
 
 class payment extends Controller{
+
+    public function payment(){
+        
      $data =[
         'amount' =>50000,
         'currency' => 'XAF',
@@ -60,7 +63,9 @@ class payment extends Controller{
         "email" =>"arollefona11@gmail.com",
         "phoneNumber" => "237699009999"
      ];
-     $response = (new LoovService())->setKeys(AppKey MerchantKey)->payIn($data);
+     $response = (new LoovService())->setKeys(AppKey MerchantKey)->payIn($data);   
+    }
+
 }
 ``` 
 <p>Success Response</p>
@@ -87,6 +92,8 @@ namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
 
 class payment extends Controller{
+
+    public function payment(){
      $data =[
         'amount' =>50000,
         'operator' => 'XAF',
@@ -96,6 +103,8 @@ class payment extends Controller{
         "phoneNumber" => "237699009999"
      ];
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->mobileSoftPay($data);
+    }
+
 }
 ```
 
@@ -202,6 +211,8 @@ namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
 
 class payment extends Controller{
+
+    public function payment(){
      $data =[
         'amount' =>50000,
         "operator": "orange-money-cm",
@@ -209,6 +220,8 @@ class payment extends Controller{
         "currency" => "XAF"
      ];
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->payOut($data);
+    }
+
 }
 ```
 
@@ -236,7 +249,11 @@ namespace App\Htpp\Controllers;
 use LoovLaravelSdk\LoovService; 
 
 class payment extends Controller{
+
+    public function payment(){
      $response = (new LoovService())->setKeys(AppKey MerchantKey)->checkStatus($reference);
+    }
+
 }
 ```
 
