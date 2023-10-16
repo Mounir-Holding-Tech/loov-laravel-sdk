@@ -18,8 +18,7 @@
      'merchant-key' =>$merchant_key
    );
    return $this;
-
-   }
+}
 
    public function payIn($data){
     $body = [
