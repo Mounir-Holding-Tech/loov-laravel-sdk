@@ -1,5 +1,5 @@
 <?php
- namespace LoovLaravelSdk;
+ namespace Loovpayment\LaravelSdk;
  use Exception;
  use Illuminate\Support\Facades\Http;
 

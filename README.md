@@ -45,7 +45,7 @@ composer require loov-payment/laravel-sdk
 ``` bash
 <?php
 namespace App\Htpp\Controllers;
-use LoovLaravelSdk\LoovService; 
+use Loovpayment\LaravelSdk\LoovService; 
 
 class payment extends Controller{
 
@@ -89,7 +89,7 @@ class payment extends Controller{
 ``` bash
 <?php
 namespace App\Htpp\Controllers;
-use LoovLaravelSdk\LoovService; 
+use Loovpayment\LaravelSdk\LoovService; 
 
 class payment extends Controller{
 
@@ -208,7 +208,7 @@ class payment extends Controller{
 ``` bash
 <?php
 namespace App\Htpp\Controllers;
-use LoovLaravelSdk\LoovService; 
+use Loovpayment\LaravelSdk\LoovService; 
 
 class payment extends Controller{
 
@@ -246,7 +246,7 @@ class payment extends Controller{
 ``` bash
 <?php
 namespace App\Htpp\Controllers;
-use LoovLaravelSdk\LoovService; 
+use Loovpayment\LaravelSdk\LoovService;  
 
 class payment extends Controller{
 

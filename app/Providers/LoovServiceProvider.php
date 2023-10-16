@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use LoovLaravelSdk\LoovService;
+use Loovpayment\LaravelSdk\LoovService;
 
 class LoovServiceProvider extends ServiceProvider
 {
