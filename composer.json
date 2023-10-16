@@ -33,13 +33,13 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "LoovPayment\\LaravelSdk\\": "src/" 
+            "LoovLaravelSdk\\": "src/" 
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-            "LoovPayment\\LaravelSdk\\": "src/" 
+            "LoovLaravelSdk\\": "src/" 
         }
     },
     "scripts": {
